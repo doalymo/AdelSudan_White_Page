@@ -2,7 +2,7 @@
     'use strict';
     angular
     .module('app')
-    .controller('user.controller',controller);
+    .controller('login.controller',controller);
     controller.$inject = ['$scope','$rootScope', '$state', '$stateParams'];
     function controller ($scope, $rootScope, userService ,$state,$stateParams){
         $scope.dologin=function(loginData){
