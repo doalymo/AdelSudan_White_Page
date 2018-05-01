@@ -1,0 +1,29 @@
+<h3 style="color:Green;">Hello:{{user.name}}</h3>
+<div g-hide="";>
+<h2>the list of persons</h2>
+
+<a ui-sref="create">Click Here to Add New person </a>
+ 
+<table class="table" ng-if="persons.length>0">
+ <tr>
+ <th>Name</th>
+ <th>PhoneNumber</th>
+ <th>Job</th>
+ <th>Address</th>
+ <th style="color:red;">Actions</th>
+ </tr>
+ <tr ng-repeat="person in persons">
+ <td>{{person.name}}</td>
+ <td>{{person.contactNo}}</td>
+ <td>{{person.job}}</td>
+ <td>{{person.address}}</td>
+ <td>
+ <a ui-sref="edit({id:person._id})">Edit</a>  
+ <a href="#" ng-click="deletePerson(person._id)">Delete</a>
+ </td>
+ </tr>
+</table>
+<div ng-if="persons.length==0">
+ No record found !!
+</div>
+</div>
