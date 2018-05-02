@@ -12,23 +12,23 @@
     $urlRouterProvider.otherwise("/");
     
     $stateProvider.state("persons", {
-    url: "/persons",
+    url: "/index",
     templateUrl: "/views/person/index.html",
     controller: "person.Controller"
     })
     .state("create", {
     url: "/create",
-    templateUrl: "/views/person/create.html",
+    templateUrl: "/views/person/index.html",
     controller: "person.Controller"
     }) 
     .state("login", {
         url: "/",
-        templateUrl: "/views/person/login.html",
+        templateUrl: "/views/login/login.html",
         controller: "person.Controller"
         })
     .state("edit", {
     url: "/edit/:id",
-    templateUrl: "/views/person/create.html",
+    templateUrl: "/views/person/index.html",
     controller: "person.Controller"
     })
     .state("details", {

@@ -1,0 +1,50 @@
+
+<div class="form-container">
+    <h2>Login</h2>
+   
+    <form name="personForm" method="post" ng-submit="dologin(loginData);" class="from-horizontal">
+        <div class="form-group">
+                
+            <label for="name">User Name</label>
+        </br>
+            <div class="col-md-4">
+            <input type="text"  name="name" ng-model="person.name" placeholder="enter user name" ng-required="true" id="userName" class="form-control" />
+        </div>
+        </div>
+        <div class="form-group">
+            </br>
+            <br>
+            <label for="password">Password</label> 
+        </br>
+    
+            <div class="col-md-4">
+            <input type="password" ng-model="person.contactNo" placeholder="enter user passward" ng-required="true" name="password" id="password" class="form-control" />
+            </div>
+    </div>
+</br>
+</br>
+        <div class="form-group">
+            <div id="2" >
+            <input type="submit" value="login" class="btn btn-primary" if="userName==admin" />
+            <a ui-sref="persons" class="btn btn-warning">Cancel</a>
+        </div>
+        </div>
+
+           
+        </div>
+    </form>
+    
+
+    
+</div>
+
+
+<br>
+
+
+
+<br>
+<div class="row show-hide-message" ng-show="errorMsg">
+    <div class="altert altert-danger">{{errorMsg}}</div>
+</div>
+

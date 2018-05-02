@@ -4,12 +4,12 @@
     angular
     .module ('app')
     .factory('loginService',function($http){
-        var userFactory={};
-        userFactory.login=function(loginData){
+        var personFactory={};
+        personFactory.login=function(loginData){
             return $http.post('/api/auth', loginData);
 
         }
-        return userFactory;
+        return personFactory;
     }
 )
 })();

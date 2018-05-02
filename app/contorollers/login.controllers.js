@@ -2,16 +2,16 @@
     'use strict';
     angular
     .module('app')
-    .controller('login.controller',controller);
+    .controller('login.Controller',controller);
     controller.$inject = ['$scope','$rootScope', '$state', '$stateParams'];
-    function controller ($scope, $rootScope, userService ,$state,$stateParams){
+    function controller ($scope, $rootScope, personService ,$state,$stateParams){
         $scope.dologin=function(loginData){
             $scope.errorMsg=false;
-            userService.login(loginData).then(function(data)
+            loginService.login(loginData).then(function(data)
         {
             if (data.data.success){
                 $state.go("persons");
-            $scope.userName=data.data.userName;
+            $scope.name=data.data.name;
             
             }
             else
