@@ -3,8 +3,8 @@
     <div >
 <h2>the list of persons</h2>
 
-<a ui-sref="create" #2=" ng-hide="   >Click Here to Add New person </a>
-<table class="table" ng-if="persons.length>0"  >
+<a  ui-sref="create" #2=" ng-hide="   >Click Here to Add New person </a>
+<table class="table"   >
  <tr>
  <th>Name</th>
  <th>PhoneNumber</th>
@@ -27,9 +27,8 @@
 </div>
 </div>
 </div>
-<div  >
-<h2 ng-show="person._id!=null">Edit</h2>
-<h2 ng-hide="person._id!=null">Create</h2>
+
+<div   >
 <hr>
 <form name="personForm" ng-submit="saveData(person)" novalidate class="form-horizontal">
  <div class="form-group">
@@ -74,3 +73,5 @@
  </div>
  </div>
 </form>
+</div>
+

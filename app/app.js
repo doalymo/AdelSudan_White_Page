@@ -17,7 +17,7 @@
     controller: "person.Controller"
     })
     .state("create", {
-    url: "/create",
+    url: "/index",
     templateUrl: "/views/person/index.html",
     controller: "person.Controller"
     }) 
