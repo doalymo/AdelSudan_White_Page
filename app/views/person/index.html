@@ -10,7 +10,7 @@
  <th>PhoneNumber</th>
  <th>Job</th>
  <th>Address</th>
- <th style="color:red;">Actions</th>
+ <th style="color:red;">Operations</th>
  </tr>
  <tr ng-repeat="person in persons">
  <td>{{person.name}}</td>
@@ -18,7 +18,7 @@
  <td>{{person.job}}</td>
  <td>{{person.address}}</td>
  <td>
- <a ui-sref="edit({id:person._id})">Edit</a>  
+ <a ui-sref="edit({id:person._id})">Edit</a> ||||  
  <a href="#" ng-click="deletePerson(person._id)">Delete</a>
  </td>
  </tr>
@@ -66,10 +66,10 @@
  </div>
  <div class="form-group">
  <div class="col-md-offset-2 col-md-10">
- <input type="submit" value="Update" class="btn btn-primary" ng-show="person._id!=null"/>
+ <input  type="submit" value="Update" class="btn btn-primary" ng-show="person._id!=null"/>
  <input type="submit" value="Save" class="btn btn-primary" ng-hide="person._id!=null"/>
  
- <a ui-sref="persons" class="btn btn-warning">Cancel</a>
+ <a style="color:rgb(219, 51, 51);" ui-sref="persons" class="btn btn-warning">Cancel</a>
  </div>
  </div>
 </form>
