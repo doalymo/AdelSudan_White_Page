@@ -1,15 +1,15 @@
 <h3 style="color:rgb(128, 0, 0);" >Hello:{{user.name}}</h3>
 <div g-hide="persons";>
-        <div  class="navbar navbar-default"  >
+        <div  class="navbar navbar-inverse" style="color:rgb(248, 246, 242)"  >
 <h2>the list of persons</h2>
 
 <a  ui-sref="create"    >Click Here to Add New person </a>
 <table class="table"   >
  <tr>
- <th>Name</th>
- <th>PhoneNumber</th>
- <th>Job</th>
- <th>Address</th>
+ <th style="color:rgb(0, 255, 106);">Name</th>
+ <th style="color:rgb(0, 255, 106);">Phone Number</th>
+ <th style="color:rgb(0, 255, 106);">Job</th>
+ <th style="color:rgb(0, 255, 106);">Address</th>
  <th style="color:red;">Operations</th>
  </tr>
  <tr ng-repeat="person in persons">

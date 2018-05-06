@@ -1,11 +1,11 @@
 
-<div class="form-container">
+<div  class="navbar navbar-default">
     <h2>Login</h2>
    
     <form name="personForm" method="post" ng-submit="dologin(loginData);" class="from-horizontal">
         <div class="form-group">
                 
-            <label for="name">User Name</label>
+         
         </br>
             <div class="col-md-4">
             <input type="text"  name="name" ng-model="person.name" placeholder="enter user name" ng-required="true" id="userName" class="form-control" />
@@ -14,7 +14,7 @@
         <div class="form-group">
             </br>
             <br>
-            <label for="password">Password</label> 
+           
         </br>
     
             <div class="col-md-4">
@@ -25,7 +25,8 @@
 </br>
         <div class="form-group">
             <div id="2" >
-            <input type="submit" value="login" class="btn btn-primary" if="userName==admin" />
+          <!--  <input type="submit" value="login" class="btn btn-primary" if="userName==admin" />-->
+          <a ui-sref="persons" class="btn btn-primary">login</a>
             <a ui-sref="persons" class="btn btn-warning">Cancel</a>
         </div>
         </div>
