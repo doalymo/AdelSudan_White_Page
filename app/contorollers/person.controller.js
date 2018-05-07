@@ -27,51 +27,39 @@
     }).catch(function(err) {
     console.log(err);
     });
+}
+};
 
-    
-    }
-    };
-    } else if ($state.current.name == "edit") {
-    $rootScope.Title = "Edit person";
-    var id = $stateParams.id;
-    personService.getPerson(id).then(function(res) {
-    $scope.person = res.data;
-    }).catch(function(err) {
-    console.log(err);
-    });
-    
     $scope.saveData = function(person) {
-    if ($scope.personForm.$valid) {
-        personService.createPerson(person).then(function(res) {
-            if (res.data == "created") {
+        $scope.IsSubmit = true;
+        if ($scope.personForm.$valid) {
+            personService.createPerson(person).then(function(res) {
+        if (res.data == "created") {
+            $state.go("persons", {}, { reload: true });
+        }
+        }).catch(function(err) {
+        console.log(err);
+        });
+
+        personService.updatePerson(person).then(function(res) {
+            if (res.data == "updated") {
                 $state.go("persons", {}, { reload: true });
             }
             }).catch(function(err) {
             console.log(err);
             });
-   personService.updatePerson(person).then(function(res) {
-    if (res.data == "updated") {
-        $state.go("persons", {}, { reload: true });
-    }
-    }).catch(function(err) {
-    console.log(err);
-    });
-    }
-    };
-    } else if ($state.current.name == "create") {
-    $rootScope.Title = "Create Person";
-    $scope.saveData = function(person) {
-    $scope.IsSubmit = true;
-    if ($scope.personForm.$valid) {
-        personService.createPerson(person).then(function(res) {
-    if (res.data == "created") {
-        $state.go("persons", {}, { reload: true });
-    }
-    }).catch(function(err) {
-    console.log(err);
-    });
-    }
-    };
-    }
+        }
+        };
+    
+        $scope.getForEdit=function(id){
+            personService.getPerson(id).then(function(res) {
+                $scope.person = res.data;
+                }).catch(function(err) {
+                console.log(err);
+                });
+        };
+
+    
+    } 
     }
    })();

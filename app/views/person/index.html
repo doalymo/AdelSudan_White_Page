@@ -1,9 +1,8 @@
-<h3 style="color:rgb(128, 0, 0);" >Hello:{{user.name}}</h3>
-<div g-hide="persons";>
+<h3 style="color:rgb(128, 0, 0);" >Hello:{{username}}</h3>
+<div>
         <div  class="navbar navbar-inverse" style="color:rgb(248, 246, 242)"  >
-<h2>the list of persons</h2>
+<h2>The List of Persons</h2>
 
-<a  ui-sref="create"    >Click Here to Add New person </a>
 <table class="table"   >
  <tr>
  <th style="color:rgb(0, 255, 106);">Name</th>
@@ -18,8 +17,8 @@
  <td>{{person.job}}</td>
  <td>{{person.address}}</td>
  <td>
- <a ui-sref="edit({id:person._id})">Edit</a> ||||  
- <a href="#" ng-click="deletePerson(person._id)">Delete</a>
+ <a href="" ng-click="getForEdit(person._id)">Edit</a> ||||  
+ <a href="" ng-click="deletePerson(person._id)">Delete</a>
  </td>
  </tr>
 </table>
@@ -29,8 +28,8 @@
 </div>
 
 <div class="navbar navbar-inverse"  >
-
-        <h3 style="color:aliceblue" class="nav navbar-nav">Create New Person</h3>
+        <h2 style="color:aliceblue" ng-show="person._id!=null">Edit Person</h2>
+        <h2 style="color:aliceblue" ng-hide="person._id!=null">Create New Person</h2>
 <hr>
 <form name="personForm" ng-submit="saveData(person)" novalidate >
  <div class="form-group">
