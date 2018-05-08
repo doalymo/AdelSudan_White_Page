@@ -37,8 +37,8 @@
       console.log(req.session.userName);
 
     });
-    var PORT = process.env.PORT || 3000;
+    var port = process.env.PORT || 3000;
     app.listen(port, function() {
-     console.log("Server is running at : http://localhost:" + PORT);
+     console.log("Server is running at : http://localhost:" + port);
     });
     
