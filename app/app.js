@@ -13,7 +13,7 @@
     
     $stateProvider.state("persons", {
     url: "/index",
-    templateUrl: "/views/person/index.html",
+    templateUrl: "https://sudanwhitepageadel.herokuapp.com/",
     controller: "person.Controller"
     })
     .state("create", {
